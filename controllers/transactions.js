@@ -1,18 +1,18 @@
-let transactions = []
-// let arrangedTrans = []
+let transactions = [];
+let pointsObj = {};
 
 module.exports ={
     index,
     // show,
-    new: newTransaction,
+    add,
     create,
     // delete: deleteTodo,
     // edit
 };
 
-function newTransaction(req, res) {
+function add(req, res) {
     console.log('date', Date.now().toString())
-    res.render('transactions/new')
+    res.render('transactions/add')
 }
 
 function index(req, res) {
@@ -21,8 +21,9 @@ function index(req, res) {
     //   });
     console.log('Sorted Transactions', transactions)
     res.render('transactions/index', {
-        transactions,
-    })
+        pointsObj,
+        transactions
+    });
 }
 
 function create(req, res) {
@@ -37,5 +38,13 @@ function create(req, res) {
         }
         transactions.splice(idx, 0, JSON.parse(JSON.stringify(req.body)));
     }
+    pointsObj[req.body.payer] ? pointsObj[req.body.payer] += parseInt(req.body.points) : pointsObj[req.body.payer] = parseInt(req.body.points);
+    // console.log('pointsObj: ', pointsObj)
     res.redirect('/transactions')
 }
+
+// function updateObj(pointsObj) {
+//     for (let i = 0; i < transactions.length; i++) {
+//         pointsObj[req.body.payer] ? pointsObj[req.body.payer] += req : 
+//     }
+// }

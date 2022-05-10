@@ -6,6 +6,6 @@ const transactionsCtrl = require('../controllers/transactions')
 router.get('/', transactionsCtrl.index);
 router.post('/', transactionsCtrl.create)
 // router.delete('/:id', transactionsCtrl.delete);
-router.get('/new', transactionsCtrl.new);
+router.get('/add', transactionsCtrl.add);
 
 module.exports = router;

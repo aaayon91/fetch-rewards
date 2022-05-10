@@ -7,9 +7,16 @@ module.exports ={
 };
 
 function index(req, res) {
+    // transactions = Transaction.getAll().transactions;
+    // pointsObj = Transaction.getAll().pointsObj;
+    // let transactions = Transaction.getAll();
+    // let pointsObj = Transaction.getObj();
+    let {transactions, pointsObj} = Transaction.getAll();
+    // console.log('IMPORTANT TRANSACTIONS', transactions)
+    // console.log('IMPORTANT OBJECT', pointsObj)
     res.render('points/index', {
-        transactions: Transaction.getAll().transactions,
-        pointsObj: Transaction.getAll().pointsObj
+        transactions,
+        pointsObj
     });
 }
 
@@ -19,5 +26,5 @@ function spendReq(req, res) {
 
 function usePoints(req, res) {
     Transaction.spendPoints(parseInt(req.body.points))
-    console.log('usePoints');
+    res.redirect('/points');
 }

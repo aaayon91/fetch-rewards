@@ -12,17 +12,17 @@
     <form action="/transactions" method="POST" autocomplete="off">
         <label>
             Payer:
-            <input type="text" name="payer">
+            <input type="text" name="payer" required>
         </label>
         <br>
         <label>
             Points:
-            <input type="number" name="points">
+            <input type="number" name="points" required>
         </label>
         <br>
         <label>
             Date:
-            <input type="datetime-local" name="timestamp">
+            <input type="datetime-local" name="timestamp" required>
         </label>
         <br>
         <button type="submit">Save Transaction</button>

@@ -8,6 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Transactions Index</h1>
+    <h1>Points Balance:</h1>
+    <% transactions.forEach(element => { %>
+        <h2><%= JSON.stringify(element) %></h2>
+    <% }); %>
+    <h2><%= JSON.stringify(transactions) %></h2>
+    <button><a href="/transactions/new">Add Transaction</a></button>
 </body>
 </html>

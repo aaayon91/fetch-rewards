@@ -4,6 +4,7 @@ let pointsObj = {};
 module.exports ={
     getAll,
     create,
+    spendPoints
 };
 
 function getAll() {
@@ -23,4 +24,8 @@ function create(transaction) {
         transactions.splice(idx, 0, JSON.parse(JSON.stringify(transaction)));
     }
     pointsObj[transaction.payer] ? pointsObj[transaction.payer] += parseInt(transaction.points) : pointsObj[transaction.payer] = parseInt(transaction.points);
+}
+
+function spendPoints(points) {
+    console.log(points)
 }

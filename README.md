@@ -1,5 +1,5 @@
 # Fetch Rewards Coding Exercise - Backend Software Engineering
-### The purpose of this excercise was to develop web app where users can view the points available in their account. The user can add points to their account as well as spend their points. When spending points, the oldest points are spent first and no points are allowed to go negative.
+### The purpose of this excercise was to develop a web app where users can view the points available in their account. The user can add points to their account as well as spend their points. When spending points, the oldest points are spent first and no points are allowed to go negative.
 <br>
 <br>
 

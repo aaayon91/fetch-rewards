@@ -15,7 +15,12 @@
 <br>
 
 ### Points Balance Page:![](/public/images/pointspage.png)
-#### In the points balance page users are able to see their current points balance as well as a breakdown of their points based on 'payer'.
+#### In the points balance page, users are able to see their current points balance as well as a breakdown of their points based on 'payer'.
+<br>
+<br>
+
+### Spend Points Page:![](/public/images/spendpoints1.png)![](/public/images/spendpoints2.png)
+#### In the spend points page, users input the amount of points they want to spend without going negative. When submitted, the lates spend will be broken down by the amount spent per 'payer'. 
 <br>
 <br>
 
@@ -24,7 +29,7 @@
 <br>
 <br>
 
-# Getting Started
+<!-- # Getting Started
 ### Launch app [here]()
 <br>
-<br>
+<br> -->

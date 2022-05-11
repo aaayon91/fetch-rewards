@@ -19,7 +19,9 @@
 <br>
 <br>
 
-### Spend Points Page:![](/public/images/spendpoints1.png)![](/public/images/spendpoints2.png)
+### Spend Points Page:
+![](/public/images/spendpoints1.png)
+![](/public/images/spendpoints2.png)
 #### In the spend points page, users input the amount of points they want to spend without going negative. When submitted, the lates spend will be broken down by the amount spent per 'payer'. 
 <br>
 <br>

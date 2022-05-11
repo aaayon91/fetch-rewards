@@ -7,24 +7,20 @@ module.exports ={
 };
 
 function index(req, res) {
-    // transactions = Transaction.getAll().transactions;
-    // pointsObj = Transaction.getAll().pointsObj;
-    // let transactions = Transaction.getAll();
-    // let pointsObj = Transaction.getObj();
-    let {transactions, pointsObj} = Transaction.getAll();
-    // console.log('IMPORTANT TRANSACTIONS', transactions)
-    // console.log('IMPORTANT OBJECT', pointsObj)
+    let {transactions, pointsObj, totalPoints} = Transaction.getAll();
     res.render('points/index', {
         transactions,
-        pointsObj
+        pointsObj,
+        totalPoints
     });
 }
 
 function spendReq(req, res) {
-    res.render('points/spend')
+    let {totalPoints, pointsSpentObj} = Transaction.getAll();
+    res.render('points/spend', {totalPoints, pointsSpentObj});
 }
 
 function usePoints(req, res) {
-    Transaction.spendPoints(parseInt(req.body.points))
-    res.redirect('/points');
+    Transaction.spendPoints(parseInt(req.body.points));
+    res.redirect('/points/spend');
 }

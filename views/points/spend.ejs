@@ -12,10 +12,23 @@
     <form action="/points" method="POST" autocomplete="off">
         <label>
             Points:
-            <input type="number" name="points" min="0" step="1" required>
+            <input class="num-input" type="number" name="points" min="0" max="<%= totalPoints %>" step="1" required>
         </label>
         <br>
-        <button type="submit">Submit</button>
+        <h2>Available Points: <%= totalPoints %></h2>
+        <button type="submit">Submit Spend</button>
     </form>
+    <br>
+    <button><a href="/points">View Points</a></button>
+    <br>
+    <br>
+    <% if (Object.keys(pointsSpentObj).length !== 0) { %>
+        <h2>Latest Points Spent Breakdown:</h2>
+        <h2>[</h2>
+        <% for (const payer in pointsSpentObj) { %>
+            <h2><%= `{ "payer": "${payer}": "points": ${pointsSpentObj[payer]} },` %></h2>
+        <% }; %>
+        <h2>]</h2>
+    <% } %>
 </body>
 </html>

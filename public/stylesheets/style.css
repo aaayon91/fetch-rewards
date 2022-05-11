@@ -17,3 +17,7 @@ button {
   padding: 3px;
   width: 150px;
 }
+
+.num-input {
+  width: 100px;
+}

@@ -12,7 +12,7 @@
 
 ### New Transaction Form:
 ![](/public/images/newtransaction.png)
-#### With this form user are able to add new transactions to their accounts.
+#### With this form users are able to add new transactions to their accounts.
 <br>
 <br>
 
@@ -25,12 +25,12 @@
 ### Spend Points Page:
 ![](/public/images/spendpoints1.png)
 ![](/public/images/spendpoints2.png)
-#### In the spend points page, users input the amount of points they want to spend without going negative. When submitted, the lates spend will be broken down by the amount spent per 'payer'. 
+#### In the spend points page, users input the amount of points they want to spend without going negative. When submitted, the latest spend will be broken down by the amount spent per 'payer'. 
 <br>
 <br>
 
 # Technologies Used
-### Express, NodeJS, HTML, JavaScript, EJS, and CSS
+### Express, NodeJS, HTML, JavaScript, EJS
 <br>
 <br>
 
